@@ -1,0 +1,30 @@
+﻿---
+import { media } from '../data/media';
+const { asset, class: className = '', sizes = '(max-width: 800px) 100vw, 50vw' } = Astro.props;
+const item = media[asset];
+if (!item) throw new Error('Slot de imagem desconhecido: ' + asset);
+---
+<div class:list={['section-media', 'media-' + asset, className, { 'media-slot': !item.src }]} style={'--media-focus: ' + (item.focus || 'center')}>
+  {item.src ? (
+    <img
+      src={item.src}
+      srcset={item.mobileSrc ? item.mobileSrc + ' 720w, ' + item.src + ' ' + item.width + 'w' : undefined}
+      sizes={sizes}
+      width={item.width}
+      height={item.height}
+      alt={item.alt}
+      loading="lazy"
+      decoding="async"
+    />
+  ) : (
+    <div class="photo-slot-content" role="img" aria-label={'Espaço reservado para ' + item.slotTitle.toLowerCase() + '. Fotografia definitiva ainda não disponível neste projeto conceitual.'}>
+      <span class="photo-slot-kicker">ÁUREA / ESTUDO VISUAL</span>
+      <span class="photo-slot-title">{item.slotTitle}</span>
+      <span class="photo-slot-caption">Fotografia a inserir</span>
+    </div>
+  )}
+</div>
+
+
+
+

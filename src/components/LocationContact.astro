@@ -1,0 +1,29 @@
+---
+import { contact } from '../data/site';
+import Arrow from './Arrow.astro';
+import SectionMedia from './SectionMedia.astro';
+---
+<section id="contato" class="contact section aurea-section" aria-labelledby="contact-title">
+  <div class="contact-scene reveal">
+    <SectionMedia asset="contact" class="contact-architecture" />
+
+    <span class="photo-disclosure">AMBIENTE CONCEITUAL · IMAGEM DE IA</span>
+  </div>
+  <div class="location-panel reveal">
+    <div class="contact-copy">
+      <p class="eyebrow">LOCALIZAÇÃO E CONTATO</p>
+      <h2 id="contact-title">Seu cuidado<br /><em>começa aqui.</em></h2>
+      <p>Um momento para ouvir, avaliar e pensar nos próximos passos com calma.</p>
+    </div>
+    <div class="location-details">
+      <address><span class="eyebrow">LOCALIZAÇÃO DEMONSTRATIVA</span><span>{contact.address}</span><span>{contact.city}</span></address>
+      <div class="contact-hours"><span class="eyebrow">HORÁRIO ILUSTRATIVO</span><p>{contact.hours}</p></div>
+      <p class="contact-phone">{contact.whatsappLabel} <span>WhatsApp placeholder</span></p>
+    </div>
+    <div class="contact-actions">
+      <a class="button button-dark" href="#contato" data-demo-contact>Agendar avaliação <Arrow diagonal /></a>
+      <a class="text-link" href="#contato" data-demo-contact>Conversar pelo WhatsApp <Arrow diagonal /></a>
+    </div>
+    <p class="contact-demo-note">Projeto conceitual da Nexora Technology. Clínica, contatos e informações são fictícios.</p>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+﻿---
+import { treatments } from '../data/site';
+import Arrow from './Arrow.astro';
+import SectionMedia from './SectionMedia.astro';
+---
+<div id="explorador" class="treatment-stage reveal" data-treatment-gallery>
+  <div role="tablist" aria-label="Categorias de tratamento" aria-orientation="vertical" class="treatment-tabs">
+    {treatments.map((t, index) => (
+      <button type="button" role="tab" id={'tab-' + t.id} aria-selected={index === 0 ? 'true' : 'false'} aria-controls={'panel-' + t.id} tabindex={index === 0 ? 0 : -1} data-treatment={t.id}>
+        <span>{t.number}</span><strong>{t.name}</strong>
+      </button>
+    ))}
+  </div>
+  <div class="treatment-frames">
+    {treatments.map((t, index) => (
+      <div id={'panel-' + t.id} role="tabpanel" aria-labelledby={'tab-' + t.id} tabindex="0" class="treatment-frame" hidden={index !== 0} data-explorer-panel={t.id}>
+        <SectionMedia asset={t.id} class="treatment-large-photo" sizes="(max-width: 800px) 100vw, 43vw" />
+        <div class="treatment-caption">
+          <p class="eyebrow">{t.name.toUpperCase()}</p>
+          <h3>{t.title.split('\n').map((line, i) => <Fragment>{i > 0 && <br />}{line}</Fragment>)}</h3>
+          <p>{t.description}</p>
+          <a href="#contato" class="text-link">Conversar sobre {t.label.toLowerCase()} <Arrow diagonal /></a>
+          <details class="treatment-details"><summary>Como pensamos esse cuidado <span aria-hidden="true">+</span></summary>
+            <ul>{t.details.map(detail => <li>{detail}</li>)}</ul>
+          </details>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+

@@ -1,0 +1,39 @@
+/* Nonblocking feedback, isolated from the landing page composition. */
+.contact-toast {
+  position: fixed;
+  right: 28px;
+  bottom: max(28px, env(safe-area-inset-bottom));
+  z-index: 40;
+  max-width: min(390px, calc(100vw - 48px));
+  padding: 16px 20px;
+  border: 1px solid #c5aa784d;
+  border-radius: 4px;
+  background: #17251f;
+  color: #f4f1e9;
+  box-shadow: 0 8px 28px #17251f1f;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.contact-toast.is-visible { opacity: 1; transform: none; }
+@media (max-width: 560px) {
+  .contact-toast {
+    right: auto;
+    left: 50%;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    width: calc(100% - 48px);
+    max-width: 390px;
+    padding: 14px 18px;
+    font-size: 14px;
+    text-align: center;
+    transform: translate(-50%, 8px);
+  }
+  .contact-toast.is-visible { transform: translate(-50%, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-toast { transition: none; }
+}

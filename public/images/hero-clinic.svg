@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1400" viewBox="0 0 1600 1400">
+<defs>
+ <linearGradient id="wall" x1="0" x2="1"><stop stop-color="#ebe5d8"/><stop offset=".6" stop-color="#dcd4c3"/><stop offset="1" stop-color="#c7beaa"/></linearGradient>
+ <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c5bdaa"/><stop offset="1" stop-color="#e5dfd1"/></linearGradient>
+ <linearGradient id="arch" x1="0" x2="1"><stop stop-color="#a39a85"/><stop offset=".15" stop-color="#d1c9b6"/><stop offset="1" stop-color="#e9e3d6"/></linearGradient>
+ <linearGradient id="seat" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eee9de"/><stop offset=".45" stop-color="#c9c7b9"/><stop offset="1" stop-color="#a3a596"/></linearGradient>
+ <linearGradient id="metal" x1="0" x2="1"><stop stop-color="#a6a99d"/><stop offset=".4" stop-color="#e4e4d9"/><stop offset="1" stop-color="#939b8c"/></linearGradient>
+ <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffae9" stop-opacity=".72"/><stop offset="1" stop-color="#fff8dc" stop-opacity="0"/></linearGradient>
+ <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+ <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="4" r=".6" fill="#574e3d" opacity=".04"/><circle cx="7" cy="8" r=".5" fill="#fff" opacity=".13"/></pattern>
+</defs>
+<path fill="url(#wall)" d="M0 0h1600v1050H0z"/><path fill="url(#floor)" d="M0 1050h1600v350H0z"/>
+<path d="M960 1050V365a300 300 0 0 1 600 0v685" fill="#b8ae99"/>
+<path d="M988 1050V375a272 272 0 0 1 544 0v675" fill="url(#arch)"/>
+<path d="M1040 1050V393a215 215 0 0 1 430 0v657" fill="#f6f0e2"/>
+<path d="M1040 650h430M1256 178v872" stroke="#c2b9a5" stroke-width="10"/>
+<path d="M1060 400v640M1450 400v640" stroke="#fffdf3" stroke-width="5"/>
+<path d="M1040 710h430v340h-430" fill="#e5e5d6"/>
+<path d="M1040 860q80-130 190-70t240-90v350h-430z" fill="#c7ceba" opacity=".6"/>
+<path d="M1035 1050 250 1400h890l380-350" fill="url(#sun)"/>
+<path d="M1255 1050 690 1400M1480 1050l-300 350" stroke="#b4ac9618" stroke-width="13"/>
+<path d="M80 0h470v950H80z" fill="#dfd7c8"/>
+<path d="M110 45h405v780H110z" stroke="#c2b8a4" fill="none" stroke-width="2"/>
+<path d="M150 840h440v180H150z" fill="#c7c0ae"/><path d="M150 840h440v20H150z" fill="#ebe4d4"/>
+<path d="M190 875h360M190 940h360" stroke="#b1a58e" stroke-width="2"/>
+<ellipse cx="825" cy="1190" rx="410" ry="55" fill="#756f5c" opacity=".22" filter="url(#shadow)"/>
+<!-- Illustrative dental chair, deliberately a local placeholder rather than a clinical photograph. -->
+<path d="M770 1090h150l80 95H670z" fill="url(#metal)"/><ellipse cx="828" cy="1190" rx="169" ry="24" fill="#a6ab9d"/><path d="M760 1050h128v105H760z" fill="url(#metal)"/>
+<path d="m609 566 67-25q32-5 53 26l181 327-96 52-208-316q-22-34 3-64" fill="#8b9181"/>
+<path d="m610 554 62-17q31-5 51 26l178 321-94 46-203-308q-20-35 6-68" fill="url(#seat)"/>
+<path d="m628 579 58-14 168 295" fill="none" stroke="#f7f4e9" stroke-width="4" opacity=".5"/>
+<path d="m819 889 205 10 214 157q28 23 8 44l-40 23q-14 9-36-6L985 988l-198-5z" fill="#8c9283"/>
+<path d="m804 880 209 10 217 150q27 18 9 42l-37 23q-14 9-35-5L981 971l-206-3z" fill="url(#seat)"/>
+<path d="m577 468 62-28q26-12 40 10l27 56q14 26-10 41l-61 27q-25 9-40-16l-28-57q-10-22 10-33" fill="#aeb2a4"/>
+<path d="m569 461 62-27q26-12 40 10l27 55q13 25-10 40l-61 28q-25 10-40-16l-27-57q-12-21 9-33" fill="url(#seat)"/>
+<path d="m727 833 106-50 56 26" stroke="#999d8d" stroke-width="18" fill="none" stroke-linecap="round"/><path d="m727 826 107-48 56 26" stroke="#e4e3d5" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M979 958v-242q0-35 31-35h76" stroke="url(#metal)" stroke-width="15" fill="none"/><path d="m1045 667 128 8 5 50-132-5z" fill="#e4e2d6"/><path d="m1062 680 94 6" stroke="#b8bcaf" stroke-width="3"/>
+<path d="M438 1090V459q0-44 40-44h350" stroke="url(#metal)" stroke-width="13" fill="none"/>
+<path d="m816 415 22 107" stroke="#b8bdae" stroke-width="10"/>
+<ellipse cx="841" cy="535" rx="62" ry="26" transform="rotate(-13 841 535)" fill="#939d8c"/><ellipse cx="841" cy="529" rx="57" ry="22" transform="rotate(-13 841 529)" fill="#e7e6d9"/><ellipse cx="841" cy="529" rx="40" ry="13" transform="rotate(-13 841 529)" fill="#fdfaf0"/>
+<ellipse cx="438" cy="1110" rx="53" ry="14" fill="#aaa998"/>
+<path d="M1410 1000v-180" stroke="#8c927e" stroke-width="5"/><path d="M1410 908q-90-80-50-135 65 23 50 135M1410 944q83-55 77-112-73-9-77 112M1410 860q55-73 21-119-52 41-21 119" fill="#8b9379"/><path d="M1355 1000h113l-20 85h-73z" fill="#b6ae99"/>
+<path d="M0 1050h1600" stroke="#c1b8a3" stroke-width="2"/>
+<path fill="url(#grain)" d="M0 0h1600v1400H0z"/>
+</svg>

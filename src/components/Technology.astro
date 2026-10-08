@@ -1,0 +1,30 @@
+﻿---
+import SectionMedia from './SectionMedia.astro';
+const items = [
+  ['01', 'Planejamento digital', 'Recursos visuais para estudar possibilidades e esclarecer as etapas do cuidado.'],
+  ['02', 'Scanner intraoral', 'Registros digitais da arcada como apoio à avaliação e ao planejamento.'],
+  ['03', 'Diagnóstico por imagem', 'Imagens que complementam a avaliação, quando indicadas para cada caso.'],
+  ['04', 'Acompanhamento individual', 'Um plano que considera a evolução do tratamento e suas necessidades.'],
+];
+---
+<section id="tecnologia" class="technology section aurea-section" aria-labelledby="technology-title">
+  <div class="technology-immersive">
+    <SectionMedia asset="technology" class="technology-backdrop" sizes="100vw" />
+    <div class="technology-heading reveal">
+      <p class="eyebrow">TECNOLOGIA COM PROPÓSITO</p>
+      <h2 id="technology-title">Clareza para decidir.<br /><em>Precisão para cuidar.</em></h2>
+      <p>A tecnologia apoia o diagnóstico.<br />O cuidado continua sendo humano.</p>
+      <a href="#technology-resources" class="text-link technology-link">Explore os recursos <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="technology-resources reveal" id="technology-resources" aria-label="Recursos da proposta conceitual">
+      {items.map(([number, title, text]) => (
+        <details class="technology-resource">
+          <summary><span class="resource-number">{number}</span><span>{title}</span><span class="resource-toggle" aria-hidden="true">+</span></summary>
+          <p>{text}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+  <p class="technology-disclaimer">Imagem e recursos ilustrativos da proposta conceitual. A indicação de exames e tratamentos depende de avaliação profissional.</p>
+</section>
+

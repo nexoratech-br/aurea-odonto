@@ -1,0 +1,20 @@
+﻿---
+import { treatments } from '../data/site';
+import Arrow from './Arrow.astro';
+import TreatmentExplorer from './TreatmentExplorer.astro';
+---
+<section id="tratamentos" class="section treatments aurea-section" aria-labelledby="treatments-title">
+  <div class="treatment-heading reveal">
+    <div><p class="eyebrow">TRATAMENTOS</p><h2 id="treatments-title">Diferentes caminhos.<br /><em>O mesmo cuidado.</em></h2></div>
+    <div class="treatment-heading-aside">
+      <p>Da prevenção ao planejamento estético, um olhar integrado para o que você precisa.</p>
+      <div class="treatment-controls" aria-label="Navegar pelos tratamentos">
+        <button type="button" data-treatment-step="-1" aria-label="Tratamento anterior"><Arrow /></button>
+        <button type="button" data-treatment-step="1" aria-label="Próximo tratamento"><Arrow /></button>
+      </div>
+    </div>
+  </div>
+  <TreatmentExplorer />
+  <noscript><div class="treatment-no-js">{treatments.map(t => <p><strong>{t.name}</strong> — {t.short}</p>)}</div></noscript>
+</section>
+
