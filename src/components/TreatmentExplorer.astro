@@ -1,6 +1,5 @@
 ﻿---
 import { treatments } from '../data/site';
-import Arrow from './Arrow.astro';
 import SectionMedia from './SectionMedia.astro';
 ---
 <div id="explorador" class="treatment-stage reveal" data-treatment-gallery>
@@ -19,7 +18,7 @@ import SectionMedia from './SectionMedia.astro';
           <p class="eyebrow">{t.name.toUpperCase()}</p>
           <h3>{t.title.split('\n').map((line, i) => <Fragment>{i > 0 && <br />}{line}</Fragment>)}</h3>
           <p>{t.description}</p>
-          <a href="#contato" class="text-link">Conversar sobre {t.label.toLowerCase()} <Arrow diagonal /></a>
+          <a href="#contato" class="text-link">Conversar sobre {t.label.toLowerCase()}</a>
           <details class="treatment-details"><summary>Como pensamos esse cuidado <span aria-hidden="true">+</span></summary>
             <ul>{t.details.map(detail => <li>{detail}</li>)}</ul>
           </details>
